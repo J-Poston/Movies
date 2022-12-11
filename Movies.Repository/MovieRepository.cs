@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Movies.Repository
 {
-    internal class MovieRepository
+    public class MovieRepository
     {
+        AppDbContext db;
+
+        public MovieRepository()
+        {
+            db = new AppDbContext();
+        }
     }
 }
