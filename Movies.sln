@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Console", "Movies.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Repository", "Movies.Repository\Movies.Repository.csproj", "{9A53D800-7C2D-475C-BC6B-5AB8011E6104}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Interactor", "Movies.Interactor\Movies.Interactor.csproj", "{3B978180-19BB-4D7D-96F3-A9308CCF536F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Domain", "Movies.Domain\Movies.Domain.csproj", "{FF681B3D-1610-4F04-8928-B90311A17C6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Domain", "Movies.Domain\Movies.Domain.csproj", "{FF681B3D-1610-4F04-8928-B90311A17C6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{9A53D800-7C2D-475C-BC6B-5AB8011E6104}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A53D800-7C2D-475C-BC6B-5AB8011E6104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A53D800-7C2D-475C-BC6B-5AB8011E6104}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B978180-19BB-4D7D-96F3-A9308CCF536F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B978180-19BB-4D7D-96F3-A9308CCF536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B978180-19BB-4D7D-96F3-A9308CCF536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B978180-19BB-4D7D-96F3-A9308CCF536F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF681B3D-1610-4F04-8928-B90311A17C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF681B3D-1610-4F04-8928-B90311A17C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF681B3D-1610-4F04-8928-B90311A17C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
