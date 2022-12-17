@@ -1,4 +1,5 @@
 ﻿using Movies.ConsoleApp;
+using Movies.Domain;
 using Movies.DTO;
 
 int myInt = 0;
@@ -18,6 +19,8 @@ Console.WriteLine($"You entered {myBool}");
 
 static void PopulateMovies()
 {
+    MovieInteractor movieInteractor = new MovieInteractor();
+
     List<Movie> movies = new List<Movie>()
     {
         new Movie() {Title = "Shawshank Redemption", Genre="Drama",Runtime =142},
@@ -36,4 +39,8 @@ static void PopulateMovies()
         new Movie() {Title = "Memento", Genre="Mystery",Runtime=113},
         new Movie() {Title = "Avatar", Genre="Action",Runtime=162}
     };
+    foreach(Movie movie in movies)
+    {
+        movieInteractor.Add(movie);
+    }
 }
