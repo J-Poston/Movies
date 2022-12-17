@@ -20,6 +20,15 @@ namespace Movies.Domain
             return _repo.Add(movie);
         }
 
+        public List<Movie> SearchByGenre(string genre)
+        {
+            return _repo.GetAll().Where(x => x.Genre.Contains(genre)).ToList();
+        }
+
+        public List<Movie> SearchByTitle(string title)
+        {
+            return _repo.GetAll().Where(x => x.Genre.Contains(title)).ToList();
+        }
 
         //public List<Item> GetAllItems()
         //{
