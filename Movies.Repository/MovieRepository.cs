@@ -22,6 +22,7 @@ namespace Movies.Repository
             _optionsBuilder.UseSqlServer(_configuration.GetConnectionString("ProductionDatabase"));
         }
 
+        
         public Movie GetById(int Id)
         {
             using (AppDbContext db = new AppDbContext(_optionsBuilder.Options))
