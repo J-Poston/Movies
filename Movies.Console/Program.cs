@@ -1,6 +1,8 @@
 ﻿using Movies.ConsoleApp;
+using Movies.Domain;
 using Movies.DTO;
 
+/*
 int myInt = 0;
 Console.WriteLine("Please enter a whole number.");
 myInt = ConsoleInputHelper.GetInt();
@@ -15,9 +17,14 @@ bool myBool = false;
 Console.WriteLine("Please enter true or false.");
 myBool = ConsoleInputHelper.GetBool();
 Console.WriteLine($"You entered {myBool}");
+*/
+
+PopulateMovies();
 
 static void PopulateMovies()
 {
+    MovieInteractor movieInteractor = new MovieInteractor();
+
     List<Movie> movies = new List<Movie>()
     {
         new Movie() {Title = "Shawshank Redemption", Genre="Drama",Runtime =142},
@@ -36,4 +43,9 @@ static void PopulateMovies()
         new Movie() {Title = "Memento", Genre="Mystery",Runtime=113},
         new Movie() {Title = "Avatar", Genre="Action",Runtime=162}
     };
+    foreach(Movie movie in movies)
+    {
+        movieInteractor.Add(movie);
+    }
+    Console.WriteLine("Success");
 }

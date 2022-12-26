@@ -97,5 +97,25 @@ namespace Movies.Repository
                 return false;
             }
         }
+
+        public List<Movie>? SearchByGenre(string genre)
+        {
+            List<Movie> movies = new List<Movie>();
+            using (AppDbContext db = new AppDbContext(_optionsBuilder.Options))
+            {
+                movies = db.Movies.Where(x => x.Genre.Contains(genre)).ToList();
+            }
+            return movies;
+        }
+
+        public List<Movie>? SearchByTitle(string title)
+        {
+            List<Movie> movies = new List<Movie>();
+            using (AppDbContext db = new AppDbContext(_optionsBuilder.Options))
+            {
+                movies = db.Movies.Where(x => x.Title.Contains(title)).ToList();
+            }
+            return movies;
+        }
     }
 }
