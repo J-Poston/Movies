@@ -5,7 +5,7 @@ namespace Movies.Domain
 {
     public class MovieInteractor
     {
-        public MovieRepository _repo { get; set; }
+        private MovieRepository _repo;
         public MovieInteractor()
         {
             _repo = new MovieRepository();
