@@ -2,6 +2,7 @@
 using Movies.Domain;
 using Movies.DTO;
 
+/*
 int myInt = 0;
 Console.WriteLine("Please enter a whole number.");
 myInt = ConsoleInputHelper.GetInt();
@@ -16,6 +17,9 @@ bool myBool = false;
 Console.WriteLine("Please enter true or false.");
 myBool = ConsoleInputHelper.GetBool();
 Console.WriteLine($"You entered {myBool}");
+*/
+
+PopulateMovies();
 
 static void PopulateMovies()
 {
@@ -43,4 +47,5 @@ static void PopulateMovies()
     {
         movieInteractor.Add(movie);
     }
+    Console.WriteLine("Success");
 }
