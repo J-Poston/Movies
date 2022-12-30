@@ -1,25 +1,34 @@
-﻿using Movies.ConsoleApp;
+﻿using Movies.ConsoleApp.Controllers;
 using Movies.Domain;
 using Movies.DTO;
 
-/*
-int myInt = 0;
-Console.WriteLine("Please enter a whole number.");
-myInt = ConsoleInputHelper.GetInt();
-Console.WriteLine($"You entered {myInt}");
+//PopulateMovies();
 
-double myDouble = 0;
-Console.WriteLine("Please enter a decimal.");
-myDouble = ConsoleInputHelper.GetDouble();
-Console.WriteLine($"You entered {myDouble}");
+string errorMessage = null;
+bool exit = false;
+MainController mainController = new MainController("Main Menu");
 
-bool myBool = false;
-Console.WriteLine("Please enter true or false.");
-myBool = ConsoleInputHelper.GetBool();
-Console.WriteLine($"You entered {myBool}");
-*/
+while (exit == false)
+{
+    if (errorMessage != null)
+    {
+        WriteError(errorMessage);
+    }
+    mainController.DisplayMenu();
+    int menuChoice = 0;
+    string input = Console.ReadLine();
+    bool validOption = mainController.ValidateMenuChoice(input, out menuChoice);
+    if (validOption) { mainController.RunMenuChoice(menuChoice, out exit); }
+    if (!validOption) { errorMessage = "Invalid entry"; }  
+}
 
-PopulateMovies();
+
+static void WriteError(string message)
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine(message);
+    Console.ForegroundColor = ConsoleColor.Gray;
+}
 
 static void PopulateMovies()
 {
@@ -43,9 +52,9 @@ static void PopulateMovies()
         new Movie() {Title = "Memento", Genre="Mystery",Runtime=113},
         new Movie() {Title = "Avatar", Genre="Action",Runtime=162}
     };
+
     foreach(Movie movie in movies)
     {
         movieInteractor.Add(movie);
     }
-    Console.WriteLine("Success");
 }

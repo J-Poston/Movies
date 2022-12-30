@@ -20,20 +20,20 @@ namespace Movies.Domain
             return _repo.Add(movie);
         }
 
-        public List<Movie> SearchByGenre(string genre)
+        public List<Movie>? SearchByGenre(string genre)
         {
-            return _repo.GetAll().Where(x => x.Genre.Contains(genre)).ToList();
+            return _repo.GetAll().Where(x => x.Genre.ToLower().Contains(genre.ToLower())).ToList();
         }
 
-        public List<Movie> SearchByTitle(string title)
+        public List<Movie>? SearchByTitle(string title)
         {
-            return _repo.GetAll().Where(x => x.Genre.Contains(title)).ToList();
+            return _repo.GetAll().Where(x => x.Title.ToLower().Contains(title.ToLower())).ToList();
         }
 
-        //public List<Item> GetAllItems()
-        //{
-        //    return _repository.GetAllItems();
-        //}
+        public List<Movie>? GetAllMovies()
+        {
+            return _repo.GetAll();
+        }
 
         public bool GetIfExists(int Id, out Movie movieToReturn)
         {

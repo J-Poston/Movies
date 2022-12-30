@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.DTO", "Movies.DTO\Movies.DTO.csproj", "{E781B8F7-A417-47F0-AC28-ABBF14827C51}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Console", "Movies.Console\Movies.Console.csproj", "{456B6C6F-3198-4EF1-BD4A-F91A9FA62458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.ConsoleApp", "Movies.Console\Movies.ConsoleApp.csproj", "{456B6C6F-3198-4EF1-BD4A-F91A9FA62458}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Repository", "Movies.Repository\Movies.Repository.csproj", "{9A53D800-7C2D-475C-BC6B-5AB8011E6104}"
 EndProject
